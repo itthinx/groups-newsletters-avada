@@ -20,6 +20,7 @@ if ( !defined( 'ABSPATH' ) ) {
  * Enqueue styles for the theme.
  */
 function groups_newsletters_avada_wp_enqueue_scripts() {
+	wp_enqueue_style( 'avada-parent-stylesheet', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'groups-newsletters-avada', get_stylesheet_directory_uri() . '/style.css', array( 'avada-stylesheet' ) );
 }
 add_action( 'wp_enqueue_scripts', 'groups_newsletters_avada_wp_enqueue_scripts' );
